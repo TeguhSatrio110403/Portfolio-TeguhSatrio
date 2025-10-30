@@ -586,7 +586,129 @@ p {
 #about .about-descr .separator {
   max-width: 80%;
   margin-bottom: 0;
-  text-align: left;
+  text-align: justify;
+}
+
+/*--------------------------------------------------------------
+# Education & Experience
+--------------------------------------------------------------*/
+#education, #experience {
+  background: #f7f7f7;
+  position: relative;
+}
+
+.education-item, .experience-item {
+  position: relative;
+  padding: 30px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 4px solid #b8a07e;
+  margin-bottom: 30px;
+}
+
+.education-item:hover, .experience-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.education-item .icon, .experience-item .icon {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #b8a07e, #c6b398);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+}
+
+.education-item h4, .experience-item h4 {
+  color: #292929;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  padding-right: 80px;
+}
+
+.education-item .date, .experience-item .date {
+  color: #b8a07e;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.education-item ul, .experience-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.education-item ul li, .experience-item ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 8px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.education-item ul li:before, .experience-item ul li:before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  color: #b8a07e;
+  font-size: 12px;
+}
+
+.timeline-connector {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #b8a07e, #c6b398);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-connector:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: #b8a07e;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border: 4px solid #fff;
+  box-shadow: 0 0 0 4px #b8a07e;
+}
+
+@media (max-width: 768px) {
+  .timeline-connector {
+    display: none;
+  }
+  
+  .education-item, .experience-item {
+    margin-bottom: 20px;
+  }
+  
+  .education-item .icon, .experience-item .icon {
+    position: static;
+    margin-bottom: 20px;
+  }
+  
+  .education-item h4, .experience-item h4 {
+    padding-right: 0;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -679,6 +801,20 @@ p {
 
 #portfolio .portfolio-item {
   margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+#portfolio .portfolio-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+#portfolio .portfolio-item:hover img {
+  transform: scale(1.1);
 }
 
 #portfolio .portfolio-item .portfolio-info {
@@ -1190,6 +1326,10 @@ blockquote {
     display: inline-block;
   }
 
+  #portfolio .portfolio-item img {
+    height: 250px;
+  }
+
   /* journal */
   #journal .journal-block .journal-info {
     margin-bottom: 30px;
@@ -1290,6 +1430,10 @@ blockquote {
     float: none;
     display: inline-block;
   }
+
+  #portfolio .portfolio-item img {
+    height: 200px;
+  }
 }
 
 /** Width between 600px to 0
@@ -1354,6 +1498,10 @@ blockquote {
     float: none;
     margin: 10px;
     display: inline-block;
+  }
+
+  #portfolio .portfolio-item img {
+    height: 200px;
   }
 
   /* journal */
@@ -1438,6 +1586,10 @@ blockquote {
     margin: 20px;
   }
 
+  #portfolio .portfolio-item img {
+    height: 200px;
+  }
+
   /* journal */
   #journal .journal-block .journal-info {
     margin-bottom: 30px;
@@ -1518,6 +1670,10 @@ blockquote {
   #portfolio .portfolio-list .nav li {
     float: none;
     margin: 20px;
+  }
+
+  #portfolio .portfolio-item img {
+    height: 200px;
   }
 
   /* journal */
