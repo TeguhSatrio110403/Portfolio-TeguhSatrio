@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Teguh Satrio - Frontend Dev & Web Designer</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Teguh Satrio - Junior Frontend Dev & Graphic Designer</title>
+  <meta content="Portfolio Teguh Satrio - Junior Frontend Developer & Graphic Designer. Fresh graduate Teknik Informatika dengan pengalaman di BRIN dan expertise dalam Web Development, UI/UX Design, dan Graphic Design." name="description">
+  <meta content="Frontend Developer, Graphic Designer, Web Developer, UI/UX Designer, Portfolio, Teguh Satrio" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/ts favicon.png" rel="icon">
@@ -22,16 +22,13 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
+  <!--  Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  
+  <!-- Preload untuk critical resources -->
+  <link rel="preload" href="assets/css/style.css" as="style">
+  <link rel="preload" href="assets/img/tgh bg merah.JPG" as="image">
 
-  <!-- =======================================================
-  * Template Name: Folio
-  * Template URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/
-  * Updated: Mar 17 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -46,8 +43,11 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto active" href="#hero">Beranda</a></li>
+          <li><a class="nav-link scrollto" href="#about">Tentang</a></li>
+          <li><a class="nav-link  scrollto" href="#education">Pendidikan</a></li>
+          <li><a class="nav-link  scrollto" href="#experience">Pengalaman</a></li>
+          <li><a class="nav-link  scrollto" href="#skills">Keahlian</a></li>
           <li><a class="nav-link  scrollto" href="#portfolio">Portfolio</a></li>
           <!-- <li><a class="nav-link  scrollto" href="#journal">Blog</a></li> -->
           <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
@@ -67,7 +67,7 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li> -->
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -80,8 +80,8 @@
 
     <div class="container">
       <div class="hero-content">
-        <h1>I'm <span class="typed" data-typed-items="Teguh Satrio, Frontend Dev, UI/UX Designer, Web Designer, Freelancer"></span></h1>
-        <p>Frontend Dev, UI/UX Designer, Web Designer, Freelancer</p>
+        <h1>I'm <span class="typed" data-typed-items="Teguh Satrio, Junior Frontend Dev, Graphic Designer, Freelancer"></span></h1>
+        <p>Junior Frontend Dev, Graphic Designer, Freelancer</p>
 
         <ul class="list-unstyled list-social">
           <li><a href="https://wa.me/085773361259"><i class="bi bi-whatsapp"></i></a></li>
@@ -102,7 +102,7 @@
           <div class="col-lg-4 ">
             <div class="div-img-bg">
               <div class="about-img">
-                <img src="assets/img/tgh bg merah.JPG" class="img-responsive" alt="me">
+                <img src="assets/img/tgh bg merah.JPG" class="img-responsive" alt="me" fetchpriority="high">
               </div>
             </div>
           </div>
@@ -110,8 +110,8 @@
           <div class="col-lg-7">
             <div class="about-descr">
 
-              <p class="p-heading">Saya adalah Frontend Developer dan sebagai UI/UX Desainer yang menyukai desain yang bersih, sederhana & unik. Saya juga menikmati membuat desain digital dan karya ilustrasi.   </p>
-              <p class="separator">Sebagai freshgraduate, saya ingin mencoba terjun kedunia perkerjaan yang sesungguhnya. Saya adalah pribadi yang kreatif dan dapat bekerja sama dengan baik sebagai tim maupun secara individu.</p>
+              <p class="p-heading">Saya adalah Junior Frontend Developer dan sebagai Graphic Desainer yang menyukai desain yang bersih, sederhana & unik. Saya juga menikmati membuat desain digital dan karya ilustrasi.   </p>
+              <p class="separator">Fresh graduate Teknik Informatika dengan pengalaman dalam pengembangan website pemantauan kualitas air di Pusat Riset Fotonika (BRIN). Memiliki kombinasi keahlian di bidang pemrograman dan desain grafis, sehingga mampu menghadirkan solusi digital yang fungsional sekaligus estetis. Terampil menggunakan Adobe Illustrator dan tools desain lainnya, serta memiliki minat dalam fotografi untuk mendukung penyajian visual yang efektif dan menarik.</p>
 
             </div>
           </div>
@@ -120,51 +120,173 @@
     </div>
     <!-- End About Section -->
 
-    <!-- ======= Services Section ======= -->
-    <div id="services">
+    <!-- ======= Education Section ======= -->
+    <div id="education" class="paddsection">
       <div class="container">
-
-        <div class="services-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="services-block">
-                <i class="bi bi-image-fill"></i>
-                <span>UI/UX DESIGN</span>
-                <p class="separator">Menjanjikan aplikasi atau web anda dengan Tampilan Pengguna yang ramah </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="services-block">
-                <i class="bi bi-globe2"></i>
-                <span>WEB DESIGN</span>
-                <p class="separator">Merancang tampilan Website dengan tampilan fresh dan modern  </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="services-block">
-                <i class="bi bi-laptop"></i>
-                <span>Frontend Developer</span>
-                <p class="separator">Skill utama yang dimiliki, menjanjikan hasil akhir yang pasti akan diminati </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="services-block">
-                <i class="bi bi-camera-fill"></i>
-                <span>PHOTOGRAPHY</span>
-                <p class="separator">Sebuah hobi disela waktu luang, namun juga menghasilkan uang</p>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
+        <div class="section-title text-center">
+          <h2>Pendidikan</h2>
         </div>
-
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <div class="education-item">
+                  <!-- <div class="icon">
+                    <i class="bi bi-mortarboard-fill"></i>
+                  </div> -->
+                  <h4>Multimedia - SMK Indonesia Global</h4>
+                  <p class="date">2018 – 2020</p>
+                  <ul>
+                    <li>Mempelajari dasar pallete warna dan layout</li>
+                    <li>Mempelajari edit foto sederhana dan video singkat</li>
+                    <li>Mempelajari dasar pengambilan foto dan video</li>
+                    <li>Mempelajari dasar visual basic</li>
+                    <li>Mempelajari dasar routing jaringan</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="education-item">
+                  <!-- <div class="icon">
+                    <i class="bi bi-graduation-cap-fill"></i>
+                  </div> -->
+                  <h4>S1 Teknik Informatika - Universitas Pamulang</h4>
+                  <p class="date">2021 – 2025</p>
+                  <ul>
+                    <li>Mempelajari pemrograman Web (HTML, CSS, JavaScript, PHP)</li>
+                    <li>Mempelajari database Management (MySQL)</li>
+                    <li>Mempelajari Algoritma dan Struktur Data</li>
+                    <li>Mempelajari dasar Machine Learning dan AI</li>
+                    <li>Mempelajari System Development Life Cycle (SDLC)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+    <!-- End Education Section -->
 
+    <!-- ======= Experience Section ======= -->
+    <div id="experience" class="paddsection">
+      <div class="container">
+        <div class="section-title text-center">
+          <h2>Pengalaman</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <div class="experience-item">
+                  <div class="icon">
+                    <i class="bi bi-code-slash"></i>
+                  </div>
+                  <h4>Frontend Developer - Pusat Riset Fotonika (BRIN)</h4>
+                  <p class="date">Desember 2024 - Juli 2025</p>
+                  <ul>
+                    <li>Membuat Website Pemantauan Kadar Air Sungai</li>
+                    <li>Membuat backend API Machine Learning untuk Prediksi</li>
+                    <li>Merancang Prototype alat IoT</li>
+                    <li>Implementasi real-time data visualization</li>
+                    <li>Optimasi performa website dan mobile responsiveness</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="experience-item">
+                  <div class="icon">
+                    <i class="bi bi-palette-fill"></i>
+                  </div>
+                  <h4>Graphic Designer - Lenstha Studio</h4>
+                  <p class="date">Januari 2020 - Maret 2020</p>
+                  <ul>
+                    <li>Membuat desain web Studio</li>
+                    <li>Membuat desain kalender tahun 2020</li>
+                    <li>Membuat cover profil Facebook</li>
+                    <li>Membuat poster komunitas Gowes</li>
+                    <li>Membuat poster dan flayer les private</li>
+                    <li>Editing Foto dan Foto Produk</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Experience Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <div id="skills" class="paddsection">
+      <div class="container">
+        <div class="section-title text-center">
+          <h2>Keahlian</h2>
+        </div>
+        <div class="row">
+          <div class="col-12 text-center">
+            <div class="d-flex flex-wrap gap-3 justify-content-center">
+              <!-- <span class="badge bg-secondary px-3 py-2 fs-6">Programming</span> -->
+              <span class="badge bg-secondary px-3 py-2 fs-6">PHP</span>
+              <span class="badge bg-secondary px-3 py-2 fs-6">HTML</span>
+              <span class="badge bg-secondary px-3 py-2 fs-6">CSS</span>
+              <span class="badge bg-secondary px-3 py-2 fs-6">JavaScript</span>
+              <span class="badge bg-secondary px-3 py-2 fs-6">MySql</span>
+              <span class="badge bg-secondary px-3 py-2 fs-6">React Js</span>
+              <!-- <span class="badge bg-secondary px-3 py-2 fs-6">Desain Grafis</span> -->
+              <span class="badge bg-secondary px-3 py-2 fs-6">Adobe Illustrator</span>
+              <span class="badge bg-secondary px-3 py-2 fs-6">Adobe Photoshop</span>
+              <span class="badge bg-secondary px-3 py-2 fs-6">Figma</span>
+              <span class="badge bg-secondary px-3 py-2 fs-6">Canva</span>
+              <span class="badge bg-secondary px-3 py-2 fs-6">Capcut</span>
+              <span class="badge bg-secondary px-3 py-2 fs-6">Microsoft Word</span>
+              <span class="badge bg-secondary px-3 py-2 fs-6">Microsoft Excel</span>
+              <span class="badge bg-secondary px-3 py-2 fs-6">Microsoft Visio</span>
+              <span class="badge bg-secondary px-3 py-2 fs-6">Microsoft PowerPoint</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Skills Section -->
+
+    <!-- ======= Services Section ======= -->
+    <div id="services" class="paddsection">
+      <div class="container">
+        <div class="section-title text-center">
+          <h2>Keterampilan</h2>
+        </div>
+        <div class="row gy-4">
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="services-block text-center p-4 border rounded-3 h-100">
+              <i class="bi bi-easel2-fill"></i>
+              <span class="d-block fw-semibold mb-1">Grapic Designer</span>
+              <!-- <p class="mb-0">Menjanjikan aplikasi atau web anda dengan Tampilan Pengguna yang ramah</p> -->
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="services-block text-center p-4 border rounded-3 h-100">
+              <i class="bi bi-globe2 fs-1 d-block mb-2"></i>
+              <span class="d-block fw-semibold mb-1">Junior WEB Developer</span>
+              <!-- <p class="mb-0">Merancang tampilan Website dengan tampilan fresh dan modern</p> -->
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="services-block text-center p-4 border rounded-3 h-100">
+              <i class="bi bi-laptop fs-1 d-block mb-2"></i>
+              <span class="d-block fw-semibold mb-1">Junior Frontend Developer</span>
+              <!-- <p class="mb-0">Skill utama yang dimiliki, hasil akhir yang diminati</p> -->
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="services-block text-center p-4 border rounded-3 h-100">
+              <i class="bi bi-image-fill fs-1 d-block mb-2"></i>
+              <span class="d-block fw-semibold mb-1">UI/UX Designer</span>
+              <!-- <p class="mb-0">Hobi di sela waktu yang juga menghasilkan</p> -->
+            </div>
+          </div>
+        </div>
+      </div>
     </div><!-- End Services Section -->
 
     <!-- ======= Portfolio Section ======= -->
@@ -172,7 +294,7 @@
 
       <div class="container">
         <div class="section-title text-center">
-          <h2>My Portfolio</h2>
+          <h2>Portfolio</h2>
         </div>
       </div>
 
@@ -184,6 +306,7 @@
               <li data-filter="*" class="filter-active">Semua</li>
               <li data-filter=".filter-photo">Photography</li>
               <li data-filter=".filter-web">Web</li>
+              <li data-filter=".filter-desain">Desain Grafis</li>
             </ul>
           </div>
         </div>
@@ -191,7 +314,7 @@
         <div class="row portfolio-container">
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/eduhub.png" class="img-fluid" alt="">
+            <img src="assets/img/portfolio/eduhub.png" class="img-fluid" alt="" loading="lazy">
             <div class="portfolio-info">
               <h4>Online Course : EduHub</h4>
               <p>Web Belajar Coding Online</p>
@@ -201,7 +324,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/Landing Page KP.png" class="img-fluid" alt="">
+            <img src="assets/img/portfolio/Landing Page KP.png" class="img-fluid" alt="" loading="lazy">
             <div class="portfolio-info">
               <h4>Water Sensor BRIN</h4>
               <p>Website Sensor Air</p>
@@ -212,7 +335,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/sekolah.png" class="img-fluid" alt="">
+            <img src="assets/img/portfolio/sekolah.png" class="img-fluid" alt="" loading="lazy">
             <div class="portfolio-info">
               <h4>SMKS EduHub Tangsel</h4>
               <p>Website Pendaftaran</p>
@@ -222,7 +345,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/bucici.png" class="img-fluid" alt="">
+            <img src="assets/img/portfolio/bucici.png" class="img-fluid" alt="" loading="lazy">
             <div class="portfolio-info">
               <h4>Waroeng Bu Chichi</h4>
               <p>Website Pemesanan</p>
@@ -232,7 +355,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-photo">
-            <img src="assets/img/portfolio/IMG_20221030_091037.jpg" class="img-fluid" alt="">
+            <img src="assets/img/portfolio/IMG_20221030_091037.jpg" class="img-fluid" alt="" loading="lazy">
             <div class="portfolio-info">
               <h4>Photo City Scape</h4>
               <p>Gedung Sudirman</p>
@@ -242,11 +365,61 @@
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-photo">
-            <img src="assets/img/portfolio/IMG_20220907_090644.jpg" class="img-fluid" alt="">
+            <img src="assets/img/portfolio/IMG_20220907_090644.jpg" class="img-fluid" alt="" loading="lazy">
             <div class="portfolio-info">
               <h4>Photo Food Product</h4>
               <p>Ayam Geprek</p>
               <a href="assets/img/portfolio/IMG_20220907_090644.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" ><i class="bx bx-plus"></i></a>
+              <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-photo">
+            <img src="assets/img/portfolio/senja 1.jpg" class="img-fluid" alt="" loading="lazy">
+            <div class="portfolio-info">
+              <h4>Photo Landscape</h4>
+              <p>Suasana Senja</p>
+              <a href="assets/img/portfolio/senja 1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" ><i class="bx bx-plus"></i></a>
+              <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-desain">
+            <img src="assets/img/portfolio/TAKOYAKI.jpg" class="img-fluid" alt="" loading="lazy">
+            <div class="portfolio-info">
+              <h4>Desain Banner</h4>
+              <p>Warung Takoyaki</p>
+              <a href="assets/img/portfolio/TAKOYAKI.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" ><i class="bx bx-plus"></i></a>
+              <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-desain">
+            <img src="assets/img/portfolio/unpamfinal.jpg" class="img-fluid" alt="" loading="lazy">
+            <div class="portfolio-info">
+              <h4>Desain Poster</h4>
+              <p>Juara 3 Lomba Hari Batik Unpam</p>
+              <a href="assets/img/portfolio/unpamfinal.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" ><i class="bx bx-plus"></i></a>
+              <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-desain">
+            <img src="assets/img/portfolio/UKOM Teguh.png" class="img-fluid" alt="" loading="lazy">
+            <div class="portfolio-info">
+              <h4>Desain Pamflet</h4>
+              <p>UJIKOM SMK Indonesia Global</p>
+              <a href="assets/img/portfolio/UKOM Teguh.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" ><i class="bx bx-plus"></i></a>
+              <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-desain">
+            <img src="assets/img/portfolio/idul fitri IG new 2.jpg" class="img-fluid" alt="" loading="lazy">
+            <div class="portfolio-info">
+              <h4>Desain Feeds Instagram</h4>
+              <p>Ucapan Hari Raya Idul Fitri</p>
+              <a href="assets/img/portfolio/idul fitri IG new 2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" ><i class="bx bx-plus"></i></a>
               <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
             </div>
           </div>
@@ -377,17 +550,17 @@
                 <h2 class="mb-30">Kontak Saya</h2>
     
                 <ul class="contact-details">
-                  <li><span>Jl. Surya Kencana, Gang. Haji Sabihi</span></li>
-                  <li><span>Pamulang, Tangerang Selatan, Banten, Indonesia</span></li>
-                  <li><span>085773361259</span></li>
-                  <li><span>tsatrio52@gmail.com</span></li>
+                  <li><i class="bi bi-geo-alt me-2"></i><span>Vila Rengganis 1, Pondok Miri, Rawakalong</span></li>
+                  <li><span>Kec. Gn. Sindur, Kabupaten Bogor, Jawa Barat, Indonesia</span></li>
+                  <li><i class="bi bi-telephone me-2"></i><span>085773361259</span></li>
+                  <li><i class="bi bi-envelope me-2"></i><span>tsatrio52@gmail.com</span></li>
                 </ul>
     
               </div>
             </div>
     
             <div class="col-lg-6">
-              <iframe style="border-radius:5px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.296007647898!2d106.7301597744119!3d-6.355715862176916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ef650727b34f%3A0x29c9e7f2f603150b!2sJl.%20Surya%20Kencana%20No.52%2C%20RT.3%2FRW.6%2C%20Pamulang%20Bar.%2C%20Kec.%20Pamulang%2C%20Kota%20Tangerang%20Selatan%2C%20Banten%2015417!5e0!3m2!1sid!2sid!4v1717315355474!5m2!1sid!2sid" width="100%" height="350" style="border:5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe style="border-radius:5px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.175719277529!2d106.71337607413334!3d-6.371301062322679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e5ca25da7fef%3A0x455e054a0b35cb50!2sVila%20Rengganis%201!5e0!3m2!1sid!2sid!4v1757043847134!5m2!1sid!2sid" width="100%" height="350" style="border:5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
     
           </div>
